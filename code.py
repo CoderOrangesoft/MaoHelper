@@ -3,7 +3,7 @@ import tkinter;
 
 window = tkinter.Tk();
 window.title("编程猫社区访问助手");
-window.geometry("500x500");
+window.geometry("500x300");
 
 def visitBtn_click():
     os.system("start" + " https://shequ.codemao.cn/work/" + visitInput.get());
@@ -35,8 +35,11 @@ humanInput.pack();
 humanInput = tkinter.Entry(window,text="在这里输入社区ID");
 humanInput.pack();
 
-humanBtn = tkinter.Button(window,text='点击访问该作品');
+humanBtn = tkinter.Button(window,text='点击访问此人');
 humanBtn.config(command=humanBtn_click);
 humanBtn.pack();
+
+tips = tkinter.Label(window,text="\n小提示:我们为什么会被报毒?因为再访问期间我们调用了cmd等一系列系统程序,\n所以被误报毒(请放心,我们的程序一定是安全的)");
+tips.pack();
 
 window.mainloop();
